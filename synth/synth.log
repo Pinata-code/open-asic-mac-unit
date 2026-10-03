@@ -1,0 +1,1020 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)
+
+-- Executing script file `synth/synth.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/pe.sv
+Parsing SystemVerilog input from `rtl/pe.sv' to AST representation.
+Generating RTLIL representation for module `\pe'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: rtl/systolic_array_top.sv
+Parsing SystemVerilog input from `rtl/systolic_array_top.sv' to AST representation.
+Generating RTLIL representation for module `\systolic_array_top'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: rtl/systolic_array_hw.sv
+Parsing SystemVerilog input from `rtl/systolic_array_hw.sv' to AST representation.
+Generating RTLIL representation for module `\systolic_array_hw'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \systolic_array_hw
+Used module:     \systolic_array_top
+Used module:         \pe
+Parameter \DATA_WIDTH = 8
+
+4.2. Executing AST frontend in derive mode using pre-parsed AST for module `\pe'.
+Parameter \DATA_WIDTH = 8
+Generating RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Reprocessing module systolic_array_top because instantiated module $paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000 has become available.
+Generating RTLIL representation for module `\systolic_array_top'.
+Parameter \DATA_WIDTH = 8
+Parameter \ARRAY_N = 4
+
+4.3. Executing AST frontend in derive mode using pre-parsed AST for module `\systolic_array_top'.
+Parameter \DATA_WIDTH = 8
+Parameter \ARRAY_N = 4
+Generating RTLIL representation for module `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top'.
+
+4.4. Analyzing design hierarchy..
+Top module:  \systolic_array_hw
+Used module:     $paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top
+Used module:         \pe
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+Parameter \DATA_WIDTH = 8
+Found cached RTLIL representation for module `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000'.
+
+4.5. Analyzing design hierarchy..
+Top module:  \systolic_array_hw
+Used module:     $paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top
+Used module:         $paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000
+
+4.6. Analyzing design hierarchy..
+Top module:  \systolic_array_hw
+Used module:     $paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top
+Used module:         $paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000
+Removing unused module `\systolic_array_top'.
+Removing unused module `\pe'.
+Removed 2 unused modules.
+
+5. Executing SYNTH pass.
+
+5.1. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1.1. Analyzing design hierarchy..
+Top module:  \systolic_array_hw
+Used module:     $paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top
+Used module:         $paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000
+
+5.1.2. Analyzing design hierarchy..
+Top module:  \systolic_array_hw
+Used module:     $paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top
+Used module:         $paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000
+Removed 0 unused modules.
+
+5.2. Executing PROC pass (convert processes to netlists).
+
+5.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl/systolic_array_hw.sv:86$22 in module systolic_array_hw.
+Marked 2 switch rules as full_case in process $proc$rtl/systolic_array_hw.sv:66$16 in module systolic_array_hw.
+Marked 2 switch rules as full_case in process $proc$rtl/pe.sv:21$27 in module $paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000.
+Marked 1 switch rules as full_case in process $proc$rtl/systolic_array_top.sv:60$250 in module $paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.
+Removed a total of 0 dead cases.
+
+5.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 7 redundant assignments.
+Promoted 56 assignments to connections.
+
+5.2.4. Executing PROC_INIT pass (extract init attributes).
+
+5.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\systolic_array_hw.$proc$rtl/systolic_array_hw.sv:86$22'.
+Found async reset \rst_n in `\systolic_array_hw.$proc$rtl/systolic_array_hw.sv:66$16'.
+Found async reset \rst_n in `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000.$proc$rtl/pe.sv:21$27'.
+Found async reset \rst_n in `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:60$250'.
+
+5.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~3 debug messages>
+
+5.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\systolic_array_hw.$proc$rtl/systolic_array_hw.sv:86$22'.
+     1/1: $0\rd_data[17:0]
+Creating decoders for process `\systolic_array_hw.$proc$rtl/systolic_array_hw.sv:66$16'.
+     1/3: $0\busy_q[0:0]
+     2/3: $0\drain[3:0]
+     3/3: $0\done[0:0]
+Creating decoders for process `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000.$proc$rtl/pe.sv:21$27'.
+     1/3: $0\r_acc[17:0]
+     2/3: $0\r_weight[7:0]
+     3/3: $0\r_data[7:0]
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$307'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$306'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$305'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$304'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$303'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$302'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$301'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$300'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$299'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$298'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$297'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$296'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$295'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$294'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$293'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$292'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$291'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$290'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$289'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$288'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$287'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$286'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$285'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$284'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$283'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$282'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$281'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$280'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$279'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$278'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$277'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$276'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$275'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$274'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$273'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$272'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$271'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$270'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$269'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$268'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$267'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$266'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$265'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$264'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$263'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$262'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$261'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$260'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:34$259'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:34$258'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:34$257'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:34$256'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:30$255'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:30$254'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:30$253'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:30$252'.
+Creating decoders for process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:60$250'.
+     1/1: $0\valid_pipe[6:0]
+
+5.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[15]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$307'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[19]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$306'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[19]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$305'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[14]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$304'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[18]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$303'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[18]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$302'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[13]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$301'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[17]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$300'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[17]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$299'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[12]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$298'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[16]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$297'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[16]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$296'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[11]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$295'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[15]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$294'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[14]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$293'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[10]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$292'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[14]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$291'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[13]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$290'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[9]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$289'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[13]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$288'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[12]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$287'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[8]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$286'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[12]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$285'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[11]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$284'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[7]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$283'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[11]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$282'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[9]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$281'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[6]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$280'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[10]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$279'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[8]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$278'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[5]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$277'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[9]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$276'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[7]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$275'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[4]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$274'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[8]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$273'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[6]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$272'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[3]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$271'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[7]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$270'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[4]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$269'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[2]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$268'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[6]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$267'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[3]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$266'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[1]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$265'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[5]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$264'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[2]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$263'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_acc[0]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$262'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[4]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$261'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[1]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$260'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[3]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:34$259'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[2]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:34$258'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[1]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:34$257'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_weight[0]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:34$256'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[15]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:30$255'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[10]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:30$254'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[5]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:30$253'.
+No latch inferred for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\pe_data[0]' from process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:30$252'.
+
+5.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\systolic_array_hw.\rd_data' using process `\systolic_array_hw.$proc$rtl/systolic_array_hw.sv:86$22'.
+  created $adff cell `$procdff$320' with positive edge clock and positive level reset.
+Creating register for signal `\systolic_array_hw.\done' using process `\systolic_array_hw.$proc$rtl/systolic_array_hw.sv:66$16'.
+  created $adff cell `$procdff$325' with positive edge clock and positive level reset.
+Creating register for signal `\systolic_array_hw.\drain' using process `\systolic_array_hw.$proc$rtl/systolic_array_hw.sv:66$16'.
+  created $adff cell `$procdff$330' with positive edge clock and positive level reset.
+Creating register for signal `\systolic_array_hw.\busy_q' using process `\systolic_array_hw.$proc$rtl/systolic_array_hw.sv:66$16'.
+  created $adff cell `$procdff$335' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000.\r_data' using process `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000.$proc$rtl/pe.sv:21$27'.
+  created $adff cell `$procdff$340' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000.\r_weight' using process `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000.$proc$rtl/pe.sv:21$27'.
+  created $adff cell `$procdff$345' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000.\r_acc' using process `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000.$proc$rtl/pe.sv:21$27'.
+  created $adff cell `$procdff$350' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.\valid_pipe' using process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:60$250'.
+  created $adff cell `$procdff$355' with positive edge clock and positive level reset.
+
+5.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `systolic_array_hw.$proc$rtl/systolic_array_hw.sv:86$22'.
+Found and cleaned up 2 empty switches in `\systolic_array_hw.$proc$rtl/systolic_array_hw.sv:66$16'.
+Removing empty process `systolic_array_hw.$proc$rtl/systolic_array_hw.sv:66$16'.
+Found and cleaned up 1 empty switch in `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000.$proc$rtl/pe.sv:21$27'.
+Removing empty process `$paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000.$proc$rtl/pe.sv:21$27'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$307'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$306'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$305'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$304'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$303'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$302'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$301'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$300'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$299'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$298'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$297'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$296'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$295'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$294'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$293'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$292'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$291'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$290'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$289'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$288'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$287'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$286'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$285'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$284'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$283'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$282'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$281'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$280'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$279'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$278'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$277'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$276'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$275'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$274'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$273'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$272'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$271'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$270'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$269'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$268'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$267'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$266'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$265'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$264'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$263'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:48$262'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:47$261'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:46$260'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:34$259'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:34$258'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:34$257'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:34$256'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:30$255'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:30$254'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:30$253'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:30$252'.
+Removing empty process `$paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.$proc$rtl/systolic_array_top.sv:60$250'.
+Cleaned up 3 empty switches.
+
+5.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+<suppressed ~8 debug messages>
+Optimizing module $paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000.
+<suppressed ~6 debug messages>
+Optimizing module $paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.
+<suppressed ~2 debug messages>
+
+5.3. Executing CHECK pass (checking for obvious problems).
+Checking module systolic_array_hw...
+Checking module $paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000...
+Checking module $paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top...
+Found and reported 0 problems.
+
+5.4. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod\pe\DATA_WIDTH=s32'00000000000000000000000000001000.
+Deleting now unused module $paramod$1a46714eff36d0824be2866f26aeed3586a3db0b\systolic_array_top.
+<suppressed ~17 debug messages>
+
+5.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+<suppressed ~2 debug messages>
+
+5.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+Removed 81 unused cells and 360 unused wires.
+<suppressed ~109 debug messages>
+
+5.7. Executing CHECK pass (checking for obvious problems).
+Checking module systolic_array_hw...
+Found and reported 0 problems.
+
+5.8. Executing OPT pass (performing simple optimizations).
+
+5.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+
+5.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_hw'.
+Computing hashes of 133 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Computing hashes of 117 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+<suppressed ~48 debug messages>
+Removed a total of 16 cells.
+
+5.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_array_hw..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~35 debug messages>
+
+5.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_array_hw.
+Performed a total of 0 changes.
+
+5.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_hw'.
+Computing hashes of 117 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Removed a total of 0 cells.
+
+5.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+Removed 0 unused cells and 16 unused wires.
+<suppressed ~1 debug messages>
+
+5.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+
+5.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_array_hw..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~35 debug messages>
+
+5.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_array_hw.
+Performed a total of 0 changes.
+
+5.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_hw'.
+Computing hashes of 117 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Removed a total of 0 cells.
+
+5.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+
+5.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+
+5.8.16. Finished fast OPT passes. (There is nothing left to do.)
+
+5.9. Executing FSM pass (extract and optimize FSM).
+
+5.9.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+5.9.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+5.9.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+
+5.9.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.9.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+5.9.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+5.9.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+5.10. Executing OPT pass (performing simple optimizations).
+
+5.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+
+5.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_hw'.
+Computing hashes of 117 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Removed a total of 0 cells.
+
+5.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_array_hw..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~35 debug messages>
+
+5.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_array_hw.
+Performed a total of 0 changes.
+
+5.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_hw'.
+Computing hashes of 117 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Removed a total of 0 cells.
+
+5.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$325 ($adff) from module systolic_array_hw (D = $0\done[0:0], Q = \done).
+
+5.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+
+5.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+<suppressed ~1 debug messages>
+
+5.10.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.10.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_array_hw..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~35 debug messages>
+
+5.10.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_array_hw.
+Performed a total of 0 changes.
+
+5.10.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_hw'.
+Computing hashes of 118 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Removed a total of 0 cells.
+
+5.10.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.10.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+
+5.10.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+
+5.10.16. Finished fast OPT passes. (There is nothing left to do.)
+
+5.11. Executing WREDUCE pass (reducing word size of cells).
+Removed top 27 bits (of 31) from port B of cell systolic_array_hw.$mul$rtl/systolic_array_hw.sv:90$24 ($mul).
+Removed top 23 bits (of 31) from port Y of cell systolic_array_hw.$mul$rtl/systolic_array_hw.sv:90$24 ($mul).
+Removed top 22 bits (of 32) from port B of cell systolic_array_hw.$shiftx$rtl/systolic_array_hw.sv:90$26 ($shiftx).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[3].gen_col_pe[3].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[3].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[3].gen_col_pe[2].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[3].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[3].gen_col_pe[1].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[3].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[3].gen_col_pe[0].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[3].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[2].gen_col_pe[3].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[2].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[2].gen_col_pe[2].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[2].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[2].gen_col_pe[1].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[2].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[2].gen_col_pe[0].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[2].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[1].gen_col_pe[3].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[1].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[1].gen_col_pe[2].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[1].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[1].gen_col_pe[1].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[1].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[1].gen_col_pe[0].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[1].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[0].gen_col_pe[3].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[0].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[0].gen_col_pe[2].u_pe.$mul$rtl/pe.sv:33$29 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[0].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[0].gen_col_pe[1].u_pe.$mul$rtl/pe.sv:33$29 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[0].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 2 bits (of 18) from port Y of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[0].gen_col_pe[0].u_pe.$mul$rtl/pe.sv:33$29 ($mul).
+Removed top 2 bits (of 18) from port B of cell systolic_array_hw.$flatten\u_core.\gen_row_pe[0].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31 ($add).
+Removed top 23 bits (of 32) from wire systolic_array_hw.$add$rtl/systolic_array_hw.sv:90$25_Y.
+
+5.12. Executing PEEPOPT pass (run peephole optimizers).
+right shiftmul pattern in systolic_array_hw: shift=$shiftx$rtl/systolic_array_hw.sv:90$26, mul=$mul$rtl/systolic_array_hw.sv:90$24
+shiftpow2 pattern in systolic_array_hw: shift=$shiftx$rtl/systolic_array_hw.sv:90$26, index=\rd_addr, stride=32, width=18, ways=16
+
+5.13. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+Removed 1 unused cells and 2 unused wires.
+<suppressed ~2 debug messages>
+
+5.14. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module systolic_array_hw:
+  creating $macc model for $flatten\u_core.\gen_row_pe[0].gen_col_pe[1].u_pe.$mul$rtl/pe.sv:33$29 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[0].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[1].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[1].gen_col_pe[3].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[0].gen_col_pe[2].u_pe.$mul$rtl/pe.sv:33$29 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[2].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[2].gen_col_pe[0].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[0].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[2].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[2].gen_col_pe[1].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[0].gen_col_pe[0].u_pe.$mul$rtl/pe.sv:33$29 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[2].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[2].gen_col_pe[2].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[0].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[0].gen_col_pe[3].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[2].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[2].gen_col_pe[3].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[3].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[3].gen_col_pe[0].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[1].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[1].gen_col_pe[2].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[3].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[3].gen_col_pe[1].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[1].gen_col_pe[1].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[0].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[3].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[3].gen_col_pe[2].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[1].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[1].gen_col_pe[0].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[3].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $macc model for $flatten\u_core.\gen_row_pe[3].gen_col_pe[3].u_pe.$mul$rtl/pe.sv:35$30 ($mul).
+  creating $macc model for $flatten\u_core.\gen_row_pe[1].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31 ($add).
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[1].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[3].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[1].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[3].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[0].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[3].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[1].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[3].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[2].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[0].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[2].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[2].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[0].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[2].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[1].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31.
+  creating $alu model for $macc $flatten\u_core.\gen_row_pe[0].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31.
+  creating $macc cell for $flatten\u_core.\gen_row_pe[1].gen_col_pe[2].u_pe.$mul$rtl/pe.sv:35$30: $auto$alumacc.cc:399:replace_macc$378
+  creating $macc cell for $flatten\u_core.\gen_row_pe[0].gen_col_pe[3].u_pe.$mul$rtl/pe.sv:35$30: $auto$alumacc.cc:399:replace_macc$379
+  creating $macc cell for $flatten\u_core.\gen_row_pe[3].gen_col_pe[1].u_pe.$mul$rtl/pe.sv:35$30: $auto$alumacc.cc:399:replace_macc$380
+  creating $macc cell for $flatten\u_core.\gen_row_pe[2].gen_col_pe[2].u_pe.$mul$rtl/pe.sv:35$30: $auto$alumacc.cc:399:replace_macc$381
+  creating $macc cell for $flatten\u_core.\gen_row_pe[3].gen_col_pe[2].u_pe.$mul$rtl/pe.sv:35$30: $auto$alumacc.cc:399:replace_macc$382
+  creating $macc cell for $flatten\u_core.\gen_row_pe[0].gen_col_pe[0].u_pe.$mul$rtl/pe.sv:33$29: $auto$alumacc.cc:399:replace_macc$383
+  creating $macc cell for $flatten\u_core.\gen_row_pe[2].gen_col_pe[1].u_pe.$mul$rtl/pe.sv:35$30: $auto$alumacc.cc:399:replace_macc$384
+  creating $macc cell for $flatten\u_core.\gen_row_pe[3].gen_col_pe[0].u_pe.$mul$rtl/pe.sv:35$30: $auto$alumacc.cc:399:replace_macc$385
+  creating $macc cell for $flatten\u_core.\gen_row_pe[1].gen_col_pe[0].u_pe.$mul$rtl/pe.sv:35$30: $auto$alumacc.cc:399:replace_macc$386
+  creating $macc cell for $flatten\u_core.\gen_row_pe[2].gen_col_pe[0].u_pe.$mul$rtl/pe.sv:35$30: $auto$alumacc.cc:399:replace_macc$387
+  creating $macc cell for $flatten\u_core.\gen_row_pe[1].gen_col_pe[1].u_pe.$mul$rtl/pe.sv:35$30: $auto$alumacc.cc:399:replace_macc$388
+  creating $macc cell for $flatten\u_core.\gen_row_pe[0].gen_col_pe[2].u_pe.$mul$rtl/pe.sv:33$29: $auto$alumacc.cc:399:replace_macc$389
+  creating $macc cell for $flatten\u_core.\gen_row_pe[1].gen_col_pe[3].u_pe.$mul$rtl/pe.sv:35$30: $auto$alumacc.cc:399:replace_macc$390
+  creating $macc cell for $flatten\u_core.\gen_row_pe[3].gen_col_pe[3].u_pe.$mul$rtl/pe.sv:35$30: $auto$alumacc.cc:399:replace_macc$391
+  creating $macc cell for $flatten\u_core.\gen_row_pe[2].gen_col_pe[3].u_pe.$mul$rtl/pe.sv:35$30: $auto$alumacc.cc:399:replace_macc$392
+  creating $macc cell for $flatten\u_core.\gen_row_pe[0].gen_col_pe[1].u_pe.$mul$rtl/pe.sv:33$29: $auto$alumacc.cc:399:replace_macc$393
+  creating $alu cell for $flatten\u_core.\gen_row_pe[0].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$394
+  creating $alu cell for $flatten\u_core.\gen_row_pe[1].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$397
+  creating $alu cell for $flatten\u_core.\gen_row_pe[2].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$400
+  creating $alu cell for $flatten\u_core.\gen_row_pe[0].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$403
+  creating $alu cell for $flatten\u_core.\gen_row_pe[2].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$406
+  creating $alu cell for $flatten\u_core.\gen_row_pe[2].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$409
+  creating $alu cell for $flatten\u_core.\gen_row_pe[0].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$412
+  creating $alu cell for $flatten\u_core.\gen_row_pe[2].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$415
+  creating $alu cell for $flatten\u_core.\gen_row_pe[3].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$418
+  creating $alu cell for $flatten\u_core.\gen_row_pe[1].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$421
+  creating $alu cell for $flatten\u_core.\gen_row_pe[3].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$424
+  creating $alu cell for $flatten\u_core.\gen_row_pe[0].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$427
+  creating $alu cell for $flatten\u_core.\gen_row_pe[3].gen_col_pe[2].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$430
+  creating $alu cell for $flatten\u_core.\gen_row_pe[1].gen_col_pe[0].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$433
+  creating $alu cell for $flatten\u_core.\gen_row_pe[3].gen_col_pe[3].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$436
+  creating $alu cell for $flatten\u_core.\gen_row_pe[1].gen_col_pe[1].u_pe.$add$rtl/pe.sv:35$31: $auto$alumacc.cc:548:replace_alu$439
+  created 16 $alu and 16 $macc cells.
+
+5.15. Executing SHARE pass (SAT-based resource sharing).
+
+5.16. Executing OPT pass (performing simple optimizations).
+
+5.16.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+
+5.16.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_hw'.
+Computing hashes of 117 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Removed a total of 0 cells.
+
+5.16.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_array_hw..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~35 debug messages>
+
+5.16.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_array_hw.
+Performed a total of 0 changes.
+
+5.16.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_hw'.
+Computing hashes of 117 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Removed a total of 0 cells.
+
+5.16.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.16.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+
+5.16.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+
+5.16.9. Finished fast OPT passes. (There is nothing left to do.)
+
+5.17. Executing MEMORY pass.
+
+5.17.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+5.17.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+5.17.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+5.17.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+5.17.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+5.17.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+
+5.17.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+5.17.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+5.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+
+5.17.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+5.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+
+5.19. Executing OPT pass (performing simple optimizations).
+
+5.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+<suppressed ~1 debug messages>
+
+5.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_hw'.
+Computing hashes of 116 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Removed a total of 0 cells.
+
+5.19.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.19.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+5.19.5. Finished fast OPT passes.
+
+5.20. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+5.21. Executing OPT pass (performing simple optimizations).
+
+5.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+<suppressed ~1 debug messages>
+
+5.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_hw'.
+Computing hashes of 116 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Removed a total of 0 cells.
+
+5.21.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_array_hw..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~32 debug messages>
+
+5.21.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_array_hw.
+Performed a total of 0 changes.
+
+5.21.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_hw'.
+Computing hashes of 116 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Removed a total of 0 cells.
+
+5.21.6. Executing OPT_SHARE pass.
+
+5.21.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.21.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+
+5.21.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+
+5.21.10. Finished fast OPT passes. (There is nothing left to do.)
+
+5.22. Executing TECHMAP pass (map to technology primitives).
+
+5.22.1. Executing Verilog-2005 frontend: /share/techmap.v
+Parsing Verilog input from `/share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+5.22.2. Continuing TECHMAP pass.
+Using template $paramod$c03664515da53280e2d50729ff6f8bcadc230d24\_90_alu for cells of type $alu.
+Using extmapper maccmap for cells of type $macc_v2.
+  add \u_core.gen_row_pe[0].gen_col_pe[0].u_pe.r_data * \col_in_flat [15:8] (8x8 bits, signed)
+  add \u_core.gen_row_pe[2].gen_col_pe[2].u_pe.r_data * \u_core.gen_row_pe[1].gen_col_pe[3].u_pe.r_weight (8x8 bits, signed)
+  add \u_core.gen_row_pe[3].gen_col_pe[2].u_pe.r_data * \u_core.gen_row_pe[2].gen_col_pe[3].u_pe.r_weight (8x8 bits, signed)
+  add \u_core.gen_row_pe[1].gen_col_pe[2].u_pe.r_data * \u_core.gen_row_pe[0].gen_col_pe[3].u_pe.r_weight (8x8 bits, signed)
+  add \u_core.gen_row_pe[0].gen_col_pe[1].u_pe.r_data * \col_in_flat [23:16] (8x8 bits, signed)
+  add \u_core.gen_row_pe[1].gen_col_pe[0].u_pe.r_data * \u_core.gen_row_pe[0].gen_col_pe[1].u_pe.r_weight (8x8 bits, signed)
+  add \row_in_flat [23:16] * \u_core.gen_row_pe[1].gen_col_pe[0].u_pe.r_weight (8x8 bits, signed)
+  add \row_in_flat [15:8] * \u_core.gen_row_pe[0].gen_col_pe[0].u_pe.r_weight (8x8 bits, signed)
+  add \row_in_flat [31:24] * \u_core.gen_row_pe[2].gen_col_pe[0].u_pe.r_weight (8x8 bits, signed)
+  add \u_core.gen_row_pe[2].gen_col_pe[0].u_pe.r_data * \u_core.gen_row_pe[1].gen_col_pe[1].u_pe.r_weight (8x8 bits, signed)
+  add \row_in_flat [7:0] * \col_in_flat [7:0] (8x8 bits, signed)
+  add \u_core.gen_row_pe[3].gen_col_pe[1].u_pe.r_data * \u_core.gen_row_pe[2].gen_col_pe[2].u_pe.r_weight (8x8 bits, signed)
+  add \u_core.gen_row_pe[2].gen_col_pe[1].u_pe.r_data * \u_core.gen_row_pe[1].gen_col_pe[2].u_pe.r_weight (8x8 bits, signed)
+  add \u_core.gen_row_pe[3].gen_col_pe[0].u_pe.r_data * \u_core.gen_row_pe[2].gen_col_pe[1].u_pe.r_weight (8x8 bits, signed)
+  add \u_core.gen_row_pe[0].gen_col_pe[2].u_pe.r_data * \col_in_flat [31:24] (8x8 bits, signed)
+  add \u_core.gen_row_pe[1].gen_col_pe[1].u_pe.r_data * \u_core.gen_row_pe[0].gen_col_pe[2].u_pe.r_weight (8x8 bits, signed)
+Using extmapper simplemap for cells of type $bmux.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010000 for cells of type $fa.
+Using template $paramod$6df0329addda9228fcc2546de2aaf14ad26c98e1\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000010010 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000010000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~3842 debug messages>
+
+5.23. Executing OPT pass (performing simple optimizations).
+
+5.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_hw.
+<suppressed ~6144 debug messages>
+
+5.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_hw'.
+Computing hashes of 12671 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Computing hashes of 12095 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Computing hashes of 11727 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Computing hashes of 11567 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Computing hashes of 11471 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Computing hashes of 11359 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Computing hashes of 11263 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+Computing hashes of 11215 cells of `\systolic_array_hw'.
+Finding duplicate cells in `\systolic_array_hw'.
+<suppressed ~4368 debug messages>
+Removed a total of 1456 cells.
+
+5.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_hw..
+Removed 960 unused cells and 2819 unused wires.
+<suppressed ~961 debug messages>
+
+5.23.5. Finished fast OPT passes.
+
+5.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `systolic_array_hw'. Setting top module to systolic_array_hw.
+
+5.24.1. Analyzing design hierarchy..
+Top module:  \systolic_array_hw
+
+5.24.2. Analyzing design hierarchy..
+Top module:  \systolic_array_hw
+Removed 0 unused modules.
+
+5.25. Printing statistics.
+
+=== systolic_array_hw ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     2270 wires
+    17626 wire bits
+      228 public wires
+     2549 public wire bits
+       10 ports
+       92 port bits
+    10255 cells
+     4433   $_AND_
+        1   $_DFFE_PN0P_
+      503   $_DFF_PN0_
+      558   $_MUX_
+      130   $_NOT_
+     1557   $_OR_
+     3056   $_XOR_
+       17   $scopeinfo
+
+5.26. Executing CHECK pass (checking for obvious problems).
+Checking module systolic_array_hw...
+Found and reported 0 problems.
+
+6. Executing CHECK pass (checking for obvious problems).
+Checking module systolic_array_hw...
+Found and reported 0 problems.
+
+7. Printing statistics.
+
+=== systolic_array_hw ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     2270 wires
+    17626 wire bits
+      228 public wires
+     2549 public wire bits
+       10 ports
+       92 port bits
+    10255 cells
+     4433   $_AND_
+        1   $_DFFE_PN0P_
+      503   $_DFF_PN0_
+      558   $_MUX_
+      130   $_NOT_
+     1557   $_OR_
+     3056   $_XOR_
+       17   $scopeinfo
+
+8. Executing Verilog backend.
+
+8.1. Executing BMUXMAP pass.
+
+8.2. Executing DEMUXMAP pass.
+Dumping module `\systolic_array_hw'.
+
+End of script. Logfile hash: 9b1bb5c910, time: 0.50s, user: 0.50s, system: 0.00s
+Yosys 0.69 (git sha1 9f75ca1f9, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)
+Time spent: 20% 18x opt_expr (0 sec), 14% 1x techmap (0 sec), ...

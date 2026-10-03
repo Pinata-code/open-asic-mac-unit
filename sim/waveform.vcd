@@ -1,0 +1,281 @@
+$date
+	Sun Sep 27 19:56:40 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_matrix_accel $end
+$var wire 32 ! c11_out_test [31:0] $end
+$var wire 32 " c10_out_test [31:0] $end
+$var wire 32 # c01_out_test [31:0] $end
+$var wire 32 $ c00_out_test [31:0] $end
+$var reg 8 % a0_in_test [7:0] $end
+$var reg 8 & a1_in_test [7:0] $end
+$var reg 8 ' b0_in_test [7:0] $end
+$var reg 8 ( b1_in_test [7:0] $end
+$var reg 1 ) clk $end
+$var reg 1 * rst_n $end
+$scope module dut $end
+$var wire 8 + a0_in [7:0] $end
+$var wire 8 , a1_in [7:0] $end
+$var wire 8 - b0_in [7:0] $end
+$var wire 8 . b1_in [7:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * rst_n $end
+$var wire 32 / c11_out [31:0] $end
+$var wire 32 0 c10_out [31:0] $end
+$var wire 32 1 c01_out [31:0] $end
+$var wire 32 2 c00_out [31:0] $end
+$var wire 8 3 b01_to_b11 [7:0] $end
+$var wire 8 4 b00_to_b10 [7:0] $end
+$var wire 8 5 a10_to_a11 [7:0] $end
+$var wire 8 6 a00_to_a01 [7:0] $end
+$var reg 8 7 a1_delayed [7:0] $end
+$var reg 8 8 b1_delayed [7:0] $end
+$scope module pe00 $end
+$var wire 8 9 a_in [7:0] $end
+$var wire 8 : b_in [7:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * rst_n $end
+$var reg 8 ; a_out [7:0] $end
+$var reg 32 < acc_out [31:0] $end
+$var reg 8 = b_out [7:0] $end
+$upscope $end
+$scope module pe01 $end
+$var wire 8 > a_in [7:0] $end
+$var wire 8 ? b_in [7:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * rst_n $end
+$var reg 8 @ a_out [7:0] $end
+$var reg 32 A acc_out [31:0] $end
+$var reg 8 B b_out [7:0] $end
+$upscope $end
+$scope module pe10 $end
+$var wire 8 C a_in [7:0] $end
+$var wire 8 D b_in [7:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * rst_n $end
+$var reg 8 E a_out [7:0] $end
+$var reg 32 F acc_out [31:0] $end
+$var reg 8 G b_out [7:0] $end
+$upscope $end
+$scope module pe11 $end
+$var wire 8 H a_in [7:0] $end
+$var wire 8 I b_in [7:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * rst_n $end
+$var reg 8 J a_out [7:0] $end
+$var reg 32 K acc_out [31:0] $end
+$var reg 8 L b_out [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 L
+b0 K
+b0 J
+b0 I
+b0 H
+b0 G
+b0 F
+b0 E
+b0 D
+b0 C
+b0 B
+b0 A
+b0 @
+b0 ?
+b0 >
+b0 =
+b0 <
+b0 ;
+b0 :
+b0 9
+b0 8
+b0 7
+b0 6
+b0 5
+b0 4
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+0*
+0)
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#5000
+1)
+#10000
+0)
+#15000
+1)
+#20000
+0)
+#25000
+1)
+#30000
+b110 (
+b110 .
+b101 '
+b101 -
+b101 :
+b11 &
+b11 ,
+b1 %
+b1 +
+b1 9
+0)
+1*
+#35000
+b101 $
+b101 2
+b101 <
+b101 4
+b101 =
+b101 D
+b1 6
+b1 ;
+b1 >
+b11 7
+b11 C
+b110 8
+b110 ?
+1)
+#40000
+b1000 (
+b1000 .
+b111 '
+b111 -
+b111 :
+b100 &
+b100 ,
+b10 %
+b10 +
+b10 9
+0)
+#45000
+b1000 8
+b1000 ?
+b100 7
+b100 C
+b1111 "
+b1111 0
+b1111 F
+b101 G
+b11 5
+b11 E
+b11 H
+b110 #
+b110 1
+b110 A
+b110 3
+b110 B
+b110 I
+b1 @
+b10011 $
+b10011 2
+b10011 <
+b111 4
+b111 =
+b111 D
+b10 6
+b10 ;
+b10 >
+1)
+#50000
+b0 (
+b0 .
+b0 '
+b0 -
+b0 :
+b0 &
+b0 ,
+b0 %
+b0 +
+b0 9
+0)
+#55000
+b0 4
+b0 =
+b0 D
+b0 6
+b0 ;
+b0 >
+b10110 #
+b10110 1
+b10110 A
+b1000 3
+b1000 B
+b1000 I
+b10 @
+b101011 "
+b101011 0
+b101011 F
+b111 G
+b100 5
+b100 E
+b100 H
+b10010 !
+b10010 /
+b10010 K
+b110 L
+b11 J
+b0 7
+b0 C
+b0 8
+b0 ?
+1)
+#60000
+0)
+#65000
+b110010 !
+b110010 /
+b110010 K
+b1000 L
+b100 J
+b0 G
+b0 5
+b0 E
+b0 H
+b0 3
+b0 B
+b0 I
+b0 @
+1)
+#70000
+0)
+#75000
+b0 L
+b0 J
+1)
+#80000
+0)
+#85000
+1)
+#90000
+0)
+#95000
+1)
+#100000
+0)

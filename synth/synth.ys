@@ -1,0 +1,35 @@
+# Yosys synthesis script for the systolic array (hardware wrapper as top).
+#
+# Run from the project root:
+#     yowasp-yosys -s synth/synth.ys -l synth/synth.log
+#
+# This is a technology-independent flow that maps logic to 6-input LUTs, so the
+# numbers are a size estimate, NOT Quartus/Vivado results:
+#   * multipliers are built from LUTs (no DSP blocks are inferred)
+#   * no timing / Fmax is reported (use constraints.sdc in Quartus for that)
+
+read_verilog -sv rtl/pe.sv
+read_verilog -sv rtl/systolic_array_top.sv
+read_verilog -sv rtl/systolic_array_hw.sv
+
+hierarchy -check -top systolic_array_hw
+
+# Flatten, optimize, and map combinational logic to LUT6 + flip-flops
+synth -top systolic_array_hw -flatten -noabc
+
+# Sanity checks and resource report
+check -assert
+stat
+
+# Netlist for inspection (optional)
+write_verilog -noattr synth/systolic_array_hw_netlist.v
+
+# ---------------------------------------------------------------------------
+# Intel Cyclone V flow (maps multipliers to DSP blocks). Replace the
+# `synth ...` line above with this to try it:
+#
+#     synth_intel_alm -family cyclonev -top systolic_array_hw
+#
+# Note: with Yosys 0.33 the abc9 step aborted on this design, so the
+# generic flow above is the default. Newer Yosys versions may work.
+# ---------------------------------------------------------------------------

@@ -1,0 +1,56 @@
+# Systolic array build/test flow.
+# Expected layout: rtl/*.sv (design), sim/tb_*.sv (testbenches), this Makefile at the root.
+#   make            -> lint + all simulations on Icarus and Verilator
+#   make lint       -> Verilator -Wall lint of the RTL
+#   make iverilog   -> run all testbenches on Icarus Verilog
+#   make verilator  -> run all testbenches on Verilator (second simulator)
+#   make wave       -> rebuild with VCD dumping (Icarus) and open GTKWave
+#                      (override the testbench: make wave TB=tb_pe)
+#   make clean
+
+RTL     := rtl/pe.sv rtl/systolic_array_top.sv rtl/systolic_array_hw.sv
+TBS     := tb_pe tb_systolic_array_top tb_systolic_array_hw
+TB      ?= tb_systolic_array_hw
+BUILD   := build
+
+# Fail the run if any testbench prints FAIL/TIMEOUT
+CHECK = grep -E "FAIL|TIMEOUT" $(1) && exit 1 || true
+
+.PHONY: all lint iverilog verilator wave clean
+all: lint iverilog verilator
+
+lint:
+	verilator --lint-only -Wall --top-module systolic_array_hw $(RTL)
+	@echo "[lint] OK"
+
+iverilog: $(addprefix $(BUILD)/iv_,$(TBS))
+	@for t in $(TBS); do \
+	  echo "=== iverilog: $$t ==="; \
+	  vvp $(BUILD)/iv_$$t | tee $(BUILD)/iv_$$t.log | tail -3; \
+	  $(call CHECK,$(BUILD)/iv_$$t.log); \
+	done
+
+$(BUILD)/iv_%: $(RTL) sim/%.sv | $(BUILD)
+	iverilog -g2012 -s $* -o $@ $(RTL) sim/$*.sv
+
+verilator: $(addprefix $(BUILD)/vl_,$(TBS))
+	@for t in $(TBS); do \
+	  echo "=== verilator: $$t ==="; \
+	  $(BUILD)/vl_$$t/V$$t | tee $(BUILD)/vl_$$t.log | tail -3; \
+	  $(call CHECK,$(BUILD)/vl_$$t.log); \
+	done
+
+$(BUILD)/vl_%: $(RTL) sim/%.sv | $(BUILD)
+	verilator --binary --timing -Wno-fatal -Wno-lint -Wno-style \
+	  --top-module $* --Mdir $@ $(RTL) sim/$*.sv > $@.build.log 2>&1 || (cat $@.build.log; exit 1)
+
+wave: | $(BUILD)
+	iverilog -g2012 -DWAVES -s $(TB) -o $(BUILD)/wave_$(TB) $(RTL) sim/$(TB).sv
+	cd $(BUILD) && vvp wave_$(TB) | tail -3
+	gtkwave $(BUILD)/$(TB).vcd &
+
+$(BUILD):
+	mkdir -p $(BUILD)
+
+clean:
+	rm -rf $(BUILD) *.vcd
