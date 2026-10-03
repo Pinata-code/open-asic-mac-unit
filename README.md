@@ -1,6 +1,6 @@
-# open-asic-mac-unit
+# systolic-matrix-accelerator
 
-A Multiply-Accumulate Unit, essentially the heart of a 8-bit Matrix Multiplication Hardware Accelerator. Coded in Verilog/SystemVerilog to incorporate a multiplier, adder, and accumulator.
+An open-source, hardware accelerator implementing an 8-bit matrix multiplication data path via systolic array architecture. Written in SystemVerilog, the design features pipelined processing elements (PEs) optimized for Multiply-Accumulate (MAC) operations, validated through automated synthesis and simulation toolflows.
 
 ## Systolic Array Matrix Multiplier
 
