@@ -1,4 +1,4 @@
-# systolic-matrix-accelerator
+# Systolic-Matrix-Accelerator
 
 An open-source, hardware accelerator implementing an 8-bit matrix multiplication data path via systolic array architecture. Written in SystemVerilog, the design features pipelined processing elements (PEs) optimized for Multiply-Accumulate (MAC) operations, validated through automated synthesis and simulation toolflows.
 
