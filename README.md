@@ -10,7 +10,7 @@ parameter, but only `ARRAY_N = 4` has been tested (see
 [Limitations](#limitations)).
 
 Verified in simulation on Icarus Verilog and Verilator, and lint-clean under
-`verilator -Wall`. It has not been synthesized yet.
+`verilator -Wall`. Synthesized via `Yosys`.
 
 ---
 
@@ -59,12 +59,9 @@ Hold `valid_in` high for those `2*ARRAY_N-1` cycles. Flat port packing: element
 
 ### Using the hardware wrapper
 
-1. (Optional) Pulse `clear` for one cycle while the inputs are zero and the
-   array is idle. This zeroes every accumulator, so no reset is needed between
-   runs.
-2. Stream the skewed inputs with `valid_in` high.
-3. Wait for `done` (sticky until the next `valid_in`).
-4. Set `rd_addr = r*ARRAY_N + c` and read `rd_data` one clock later.
+1. Stream the skewed inputs with `valid_in` high.
+2. Wait for `done` (sticky until the next `valid_in`).
+3. Set `rd_addr = r*ARRAY_N + c` and read `rd_data` one clock later.
 
 ---
 
@@ -136,6 +133,6 @@ make clean
 - `valid_out` of the core is a delayed copy of `valid_in` (latency
   `2*ARRAY_N-1`). It is not a "results final" flag for arbitrary stream
   lengths; use `done` from the wrapper for that.
-- Synthesized in Yosys, LUT counts and Fmax were not     measured.
+- Synthesized in Yosys, LUT counts and Fmax were not measured.
   
 >>>>>>> 5830bbf (Added hardware accelerator RTL, testbenches, and synthesis documentations)
